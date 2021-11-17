@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    background: #1e1e1e;
+    position: relative;
+}
+
+.vapor {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.vapor span {
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    animation: vap1 5s linear infinite;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.05s);
+}
+
+@keyframes vap1 {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-150px) scaleX(5);
+        
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px) scaleX(10);
+       
+    }
+}
